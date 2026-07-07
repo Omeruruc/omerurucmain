@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import Projects from "@/components/Projects";
+
+export const metadata: Metadata = {
+  title: "Projeler | Ömer Faruk Uruç",
+};
+
+export default function Page() {
+  return <Projects />;
+}
