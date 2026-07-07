@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -38,6 +38,10 @@ export const metadata: Metadata = {
       "Full-stack geliştirme, yapay zeka entegrasyonları ve çoklu ajan sistemleri üzerine çalışan yazılım mühendisliği öğrencisi.",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#8a7355",
 };
 
 export default function RootLayout({
