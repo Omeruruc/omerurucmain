@@ -21,6 +21,13 @@ const projects: Project[] = [
     gradient: 'from-violet-500 to-fuchsia-400',
   },
   {
+    title: 'Rakip Reklam Takip Sistemi',
+    company: 'Branchsight',
+    desc: 'Rakiplerin Meta reklamlarını her gün tarayıp önceki durumla karşılaştıran, yalnızca yeni başlayan ve duran reklamları Slack’e bildiren otomatik takip sistemi.',
+    tags: ['Next.js', 'Inngest', 'Apify', 'Slack Entegrasyonu'],
+    gradient: 'from-sky-500 to-indigo-400',
+  },
+  {
     title: 'Roomiks',
     url: 'https://roomiks.com',
     desc: 'Öğrencilere yönelik, birlikte çalışma ve verimlilik odaklı geliştirilmiş kapsamlı bir web platformu.',

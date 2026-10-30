@@ -63,8 +63,11 @@ tags:
 - extendedWaitUntil:
     visible: "AI Visibility"
     timeout: 10000
+- assertVisible: "Rakip Reklam Takip Sistemi"
 - assertVisible: "Branchsight Şirket Projesi"
-- assertVisible: "Roomiks"
+- scrollUntilVisible:
+    element: "Roomiks"
+    direction: DOWN
 - scrollUntilVisible:
     element: "Benim Saham"
     direction: DOWN
