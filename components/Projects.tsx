@@ -1,9 +1,25 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { Building2, ExternalLink } from 'lucide-react'
 
-const projects = [
+type Project = {
+  title: string
+  url?: string
+  company?: string
+  desc: string
+  tags: string[]
+  gradient: string
+}
+
+const projects: Project[] = [
+  {
+    title: 'AI Visibility',
+    company: 'Branchsight',
+    desc: 'Markaların her şubesi için lokasyona özel sorguları Gemini, ChatGPT, Claude ve Google AI Mode’a sorup markanın yanıtlarda yer alıp almadığını, sırasını ve rakiplere karşı payını ölçen izleme paneli.',
+    tags: ['Next.js', 'LLM Entegrasyonu', 'PostgreSQL', 'Inngest'],
+    gradient: 'from-violet-500 to-fuchsia-400',
+  },
   {
     title: 'Roomiks',
     url: 'https://roomiks.com',
@@ -46,13 +62,13 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
               href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={project.url ? '_blank' : undefined}
+              rel={project.url ? 'noopener noreferrer' : undefined}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -66,11 +82,19 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold text-stone-900 dark:text-white group-hover:text-primary-500 transition-colors">
                     {project.title}
                   </h3>
-                  <ExternalLink
-                    size={16}
-                    className="text-stone-400 group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
-                  />
+                  {project.url && (
+                    <ExternalLink
+                      size={16}
+                      className="text-stone-400 group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    />
+                  )}
                 </div>
+                {project.company && (
+                  <span className="self-start inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 mb-3 rounded-full bg-primary-500/10 text-primary-600 dark:text-primary-400">
+                    <Building2 size={12} />
+                    {project.company} Şirket Projesi
+                  </span>
+                )}
                 <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed flex-1">
                   {project.desc}
                 </p>
