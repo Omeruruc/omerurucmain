@@ -1,0 +1,90 @@
+url: https://omeruruc.com
+name: omeruruc.com portföy smoke testi
+tags:
+  - web
+  - smoke
+---
+- launchApp
+
+# Ana sayfa (Hero)
+- extendedWaitUntil:
+    visible: "Merhaba, ben"
+    timeout: 15000
+- assertVisible: "Yazılım Mühendisi & Yapay Zeka Araştırmacısı"
+- assertVisible: "Beni Tanı"
+- assertVisible: "İletişime Geç"
+
+# Keşfet kartları
+- scrollUntilVisible:
+    element: "Kim olduğumu ve neye odaklandığımı öğren."
+    direction: DOWN
+- assertVisible: "Kullandığım teknolojiler ve araçlar."
+- assertVisible: "Staj ve akademik proje geçmişim."
+- scrollUntilVisible:
+    element: "Geliştirdiğim canlı projeler."
+    direction: DOWN
+- scrollUntilVisible:
+    element: "Benimle nasıl iletişime geçebilirsin."
+    direction: DOWN
+
+# Hakkımda (Hero butonu ile)
+- scrollUntilVisible:
+    element: "Beni Tanı"
+    direction: UP
+- tapOn: "Beni Tanı"
+- extendedWaitUntil:
+    visible: "Odak Alanı"
+    timeout: 10000
+- assertVisible: "Eğitim"
+- assertVisible: "Vizyon"
+
+# Yetkinlikler
+- openLink: https://omeruruc.com/yetkinlikler
+- extendedWaitUntil:
+    visible: "Backend & Frontend"
+    timeout: 10000
+- assertVisible: "Veritabanı"
+- scrollUntilVisible:
+    element: "Metodolojiler & Araçlar"
+    direction: DOWN
+
+# Deneyim
+- openLink: https://omeruruc.com/deneyim
+- extendedWaitUntil:
+    visible: "Branchsight"
+    timeout: 10000
+- assertVisible: "Junior Yazılım Mühendisi"
+- scrollUntilVisible:
+    element: "Scrum Master & Yapay Zeka Araştırmacısı"
+    direction: DOWN
+
+# Projeler
+- openLink: https://omeruruc.com/projeler
+- extendedWaitUntil:
+    visible: "AI Visibility"
+    timeout: 10000
+- assertVisible: "Branchsight Şirket Projesi"
+- assertVisible: "Roomiks"
+- scrollUntilVisible:
+    element: "Benim Saham"
+    direction: DOWN
+- scrollUntilVisible:
+    element: "MBM Elektrik İnşaat"
+    direction: DOWN
+
+# İletişim (Hero butonu ile)
+- openLink: https://omeruruc.com
+- extendedWaitUntil:
+    visible: "İletişime Geç"
+    timeout: 10000
+- tapOn: "İletişime Geç"
+- extendedWaitUntil:
+    visible: "omeruruc59@gmail.com"
+    timeout: 10000
+- assertVisible: "linkedin.com/in/omeruruc"
+- assertVisible: "github.com/Omeruruc"
+
+# Footer
+- scrollUntilVisible:
+    element: ".*Tüm hakları saklıdır.*"
+    direction: DOWN
