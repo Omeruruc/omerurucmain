@@ -52,7 +52,7 @@ export default function About() {
             <span className="font-semibold text-stone-900 dark:text-white">
               Branchsight
             </span>{" "}
-            şirketinde Yazılım Mühendisliği Stajyeriyim. Full-stack web
+            şirketinde Junior Yazılım Mühendisiyim. Full-stack web
             geliştirme süreçlerine, yapay zeka entegrasyonlarına ve çoklu ajan
             (multi-agent) sistemlerine odaklanıyorum. Projelerimde performansı,
             ölçeklenebilirliği ve kullanıcı deneyimini ön planda tutarak

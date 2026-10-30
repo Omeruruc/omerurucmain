@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Ömer Faruk Uruç | Yazılım Mühendisi & Yapay Zeka Araştırmacısı",
   description:
-    "Fırat Üniversitesi Yazılım Mühendisliği öğrencisi, Branchsight bünyesinde Yazılım Mühendisliği Stajyeri. Full-stack geliştirme, yapay zeka entegrasyonları ve çoklu ajan sistemleri üzerine çalışıyorum.",
+    "Fırat Üniversitesi Yazılım Mühendisliği öğrencisi, Branchsight bünyesinde Junior Yazılım Mühendisi. Full-stack geliştirme, yapay zeka entegrasyonları ve çoklu ajan sistemleri üzerine çalışıyorum.",
   keywords: [
     "Ömer Faruk Uruç",
     "Yazılım Mühendisi",

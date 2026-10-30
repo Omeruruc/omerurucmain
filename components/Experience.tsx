@@ -6,7 +6,7 @@ import { Briefcase, Users } from 'lucide-react'
 const items = [
   {
     icon: Briefcase,
-    role: 'Yazılım Mühendisliği Stajyeri',
+    role: 'Junior Yazılım Mühendisi',
     org: 'Branchsight',
     period: 'Temmuz 2026 - Halen',
     points: [

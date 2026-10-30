@@ -71,7 +71,7 @@ export default function Hero() {
           </p>
           <p className="mt-3 text-base text-stone-500 dark:text-stone-400 max-w-xl mx-auto">
             Fırat Üniversitesi Yazılım Mühendisliği öğrencisi ·
-            Branchsight&apos;ta Yazılım Mühendisliği Stajyeri
+            Branchsight&apos;ta Junior Yazılım Mühendisi
           </p>
         </motion.div>
 
